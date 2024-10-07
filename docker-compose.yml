@@ -9,4 +9,4 @@ services:
       - NODE_ENV=production  # Set production environment
     command: ["npx", "serve", "build"]  # Override the default CMD
     restart: unless-stopped
-    container_name: dockerized-react  # Custom container name
+    # container_name: dockerized-react  # Custom container name
