@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .  # Current directory as the context for the Docker build
+      dockerfile: Dockerfile  # Optional if your Dockerfile is named 'Dockerfile'
+    ports:
+      - "3000:3000"  # Map port 3000 on the host to port 3000 on the container
+    environment:
+      - NODE_ENV=production  # Set production environment
+    command: ["npx", "serve", "build"]  # Override the default CMD
+    restart: unless-stopped
+    container_name: dockerized-react  # Custom container name
